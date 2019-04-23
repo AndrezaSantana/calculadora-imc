@@ -1,0 +1,20 @@
+h1 {
+    display: inline-block;
+    text-align: center;
+    font-family: monospace, serif;
+    text-decoration-line: underline;
+}
+form{
+    padding: 8px;
+    border-style: double;
+    display: inline-block;
+    align-items:  center;
+}
+input{
+    margin: 4px;
+    padding: 4px;
+   
+}
+input#peso, #altura, #idade{
+     width: 124px;
+}
