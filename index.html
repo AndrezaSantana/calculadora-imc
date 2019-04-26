@@ -6,26 +6,29 @@
     <link rel="stylesheet" type="text/css" href="main.css">
     </head>
     <body>
-        <h1>Calculador de IMC</h1>
+        <h1>Calculadora do IMC</h1>
+       
+        <p>A classificação do índice de massa corporal (IMC), pode ajudar a identificar obesidade ou desnutrição em crianças, adolescentes, adultos e idosos.</p>
         
         <form action="javascript:submit()">
-        Seu peso: &nbsp;
-        <input type="number" id="peso" placeholder="kg"><br>
-        Sua altura:
-        <input type="number" id="altura" placeholder="cm"><br>
-        Sua idade:
-        <input type="number" id="idade" placeholder="anos"><br>
+        Peso:&nbsp;&nbsp;&nbsp;
+        <input type="number" id="peso" placeholder="50 kg"><br>
+        Altura:
+        <input type="number" id="altura" placeholder="160 cm"><br>
+        Idade:&nbsp;
+        <input type="number" id="idade" placeholder="25 anos"><br>
         Sexo:
         <input type="radio" value="M" id="sexoM" name="sexo">
         <label for="sexoM">Masculino</label>
         <input type="radio" value="F" id="sexoF" name="sexo">
         <label for="sexoF">Feminino</label><br>
-        <input type="submit" value="Submit">
+        <input type="submit" value="Submit" onclick="submit">
         </form>
         
         <h2>Resultado:</h2>
         
-        <table style="width:100%">
+        <tbody id="invisível" style="display: none">
+        <table style="width:100%" >
         <tr>
         <th>Classificação</th>
         <th>IMC</th> 
@@ -67,6 +70,7 @@
         <td>Refluxo, dificuldade para se mover, escaras, diabetes, infarto, AVC</td>
         </tr>
         </table>
+        </tbody>
 
     </body>
     
