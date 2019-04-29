@@ -10,7 +10,7 @@
        
         <p>A classificação do índice de massa corporal (IMC), pode ajudar a identificar obesidade ou desnutrição em crianças, adolescentes, adultos e idosos.</p>
         
-        <form action="javascript:submit()">
+        <form action="javascript:submit()" id="form">
         Peso:&nbsp;&nbsp;&nbsp;
         <input type="number" id="peso" placeholder="50 kg"><br>
         Altura:
@@ -22,7 +22,8 @@
         <label for="sexoM">Masculino</label>
         <input type="radio" value="F" id="sexoF" name="sexo">
         <label for="sexoF">Feminino</label><br>
-        <input type="submit" value="Submit" onclick="submit">
+        <input type="submit" value="Enviar" onclick="submit">
+        <input type="reset" value="Limpar" onclick="limpar">
         </form>
         
         <h2>Resultado:</h2>
