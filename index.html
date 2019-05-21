@@ -1,80 +1,42 @@
 <!DOCTYPE html>
 <html>
-    <head>
-    <title>Calculador de IMC</title>
-    <meta charset="UTF8"/>
-    <link rel="stylesheet" type="text/css" href="main.css">
-    </head>
-    <body>
-        <h1>Calculadora do IMC</h1>
-       
-        <p>A classificação do índice de massa corporal (IMC), pode ajudar a identificar obesidade ou desnutrição em crianças, adolescentes, adultos e idosos.</p>
-        
-        <form action="javascript:submit()" id="form">
-        Peso:&nbsp;&nbsp;&nbsp;
-        <input type="number" id="peso" placeholder="50 kg"><br>
-        Altura:
-        <input type="number" id="altura" placeholder="160 cm"><br>
-        Idade:&nbsp;
-        <input type="number" id="idade" placeholder="25 anos"><br>
-        Sexo:
-        <input type="radio" value="M" id="sexoM" name="sexo">
-        <label for="sexoM">Masculino</label>
-        <input type="radio" value="F" id="sexoF" name="sexo">
-        <label for="sexoF">Feminino</label><br>
-        <input type="submit" value="Enviar" onclick="submit">
-        <input type="reset" value="Limpar" onclick="limpar">
-        </form>
-        
-        <h2>Resultado:</h2>
-        
-        <tbody id="invisível" style="display: none">
-        <table style="width:100%" >
-        <tr>
-        <th>Classificação</th>
-        <th>IMC</th> 
-        <th>O que pode acontecer</th>
-        </tr>
-        <tr>
-        <td>Muito abaixo do peso</td>
-        <td>16 a 16,9 kg/m2</td> 
-        <td>Queda de cabelo, infertilidade, ausência menstrual</td>
-        </tr>
-        <tr>
-        <td>Abaixo do peso</td>
-        <td>17 a 18,4 kg/m2</td> 
-        <td>Fadiga, stress, ansiedade</td>
-        </tr>
-        <tr>
-        <td>Peso normal</td>
-        <td>18,5 a 24,9 kg/m2</td> 
-        <td>Menor risco de doenças cardíacas e vasculares</td>
-        </tr>
-        <tr>
-        <td>Acima do peso</td>
-        <td>25 a 29,9 kg/m2</td> 
-        <td>Fadiga, má circulação, varizes</td>
-        </tr>
-        <tr>
-        <td>Obesidade Grau I</td>
-        <td>30 a 34,9 kg/m2</td> 
-        <td>Diabetes, angina, infarto, aterosclerose</td>
-        </tr>
-        <tr>
-        <td>Obesidade Grau II</td>
-        <td>35 a 40 kg/m2</td> 
-        <td>Apneia do sono, falta de ar</td>
-        </tr>
-        <tr>
-        <td>Obesidade Grau III</td>
-        <td>maior que 40 kg/m2</td> 
-        <td>Refluxo, dificuldade para se mover, escaras, diabetes, infarto, AVC</td>
-        </tr>
-        </table>
-        </tbody>
 
-    </body>
-    
-    <script src="script.js"></script>
-    
+<head>
+    <title>Calculador de IMC</title>
+    <meta charset="UTF8" />
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">-->
+</head>
+
+<body>
+    <h1>Calculadora do IMC</h1>
+
+    <p>A classificação do índice de massa corporal (IMC), pode ajudar a identificar obesidade ou desnutrição em crianças, adolescentes, adultos e idosos.</p>
+
+    <form action="javascript:submit()" id="form">
+        Peso:
+        <input type="ranger" id="weight" placeholder="50 kg"><br>
+        Altura:
+        <input type="number" min="0" max="500" id="height" placeholder="160 cm"><br>
+        Idade:
+        <input type="number" min="0" max="120" id="age" placeholder="25 anos"><br>
+        Sexo:
+        <input type="radio" value="M" id="male" name="sexo">
+        <label for="male">Masculino</label>
+        <input type="radio" value="F" id="female" name="sexo">
+        <label for="female">Feminino</label><br>
+        <input type="submit" value="Calcular">
+        <input type="reset" value="Limpar" id="clear">
+    </form>
+    <div class="result">
+        <h2>Resultado: <span id="imc"></span></h2>
+        <div id="classification"></div>
+        <div id="range"></div>
+        <div id="description"></div>
+    </div>
+</body>
+
+<script src="script.js"></script>
+
 </html>
